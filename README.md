@@ -41,6 +41,7 @@ My name is Marcos H. Alano. This is my third role published on Ansible Galaxy. I
 To Do
 -----
 
+* Find a better way to deal with libgcrypt11 dependency
 * Create a variable called "source" to define if the package will be downloaded from Atom website ("web") or from repository ("repo")
 * Support macOS
 * Find a way to add support for RPM-based distros

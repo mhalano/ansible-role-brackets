@@ -5,9 +5,14 @@
 # DEB 32-bit: https://github.com/adobe/brackets/releases/download/release-1.7/Brackets.Release.1.7.32-bit.deb
 # DEB 64-bit: https://github.com/adobe/brackets/releases/download/release-1.7/Brackets.Release.1.7.64-bit.deb
 
+# This dependency is just avaiable until Trusty. That's a messy situation.
+- name: install libgcrypt11
+  apt:
+    deb: http://archive.ubuntu.com/ubuntu/pool/main/libg/libgcrypt11/libgcrypt11_1.5.3-2ubuntu4.4_amd64.deb
+
 - name: install brackets
   apt:
-   deb: https://github.com/adobe/brackets/releases/download/release-{{ release }} /Brackets.Release.{{ release }}.{{ ansible_userspace_bits }}-bit.deb
+   deb: https://github.com/adobe/brackets/releases/download/release-{{ release }}/Brackets.Release.{{ release }}.{{ ansible_userspace_bits }}-bit.deb
 
 - name: add webupd8 brackets repo
   apt_repository:
