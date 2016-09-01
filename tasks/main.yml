@@ -1,0 +1,16 @@
+---
+# tasks file for brackets
+
+# No RPM package for now. May be in a external repository.
+# DEB 32-bit: https://github.com/adobe/brackets/releases/download/release-1.7/Brackets.Release.1.7.32-bit.deb
+# DEB 64-bit: https://github.com/adobe/brackets/releases/download/release-1.7/Brackets.Release.1.7.64-bit.deb
+
+- name: install brackets
+  apt:
+   deb: https://github.com/adobe/brackets/releases/download/release-{{ release }} /Brackets.Release.{{ release }}.{{ ansible_userspace_bits }}-bit.deb
+
+- name: add webupd8 brackets repo
+  apt_repository:
+    repo: ppa:webupd8team/brackets
+    filename: brackets
+  when: repo == True
