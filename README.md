@@ -26,7 +26,7 @@ Here an a simple example of a playbook:
 
     - hosts: localhost
       roles:
-         - { role: brackets, release: 1.6 }
+         - { role: brackets, brackets_release: 1.6 }
 
 License
 -------

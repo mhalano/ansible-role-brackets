@@ -2,7 +2,7 @@
 # defaults file for brackets
 
 # define which release will be installed
-release: 1.7
+brackets_release: 1.7
 
 # define if webupd8 repository will be added
-repo: True
+brackets_repo: yes
